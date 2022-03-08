@@ -2,6 +2,7 @@
 
 * {
   box-sizing: border-box;
+  transition: all 0.3s ease;
 }
 
 html {
@@ -77,6 +78,15 @@ button:hover,
 button:active {
   background-color: #33059e;
   border-color: #33059e;
+}
+
+button:disabled,
+button:disabled:hover,
+button:disabled:active {
+  background-color: #ccc;
+  color: #3f3f3f;
+  border-color: #ccc;
+  cursor: not-allowed;
 }
 
 .form-actions {
