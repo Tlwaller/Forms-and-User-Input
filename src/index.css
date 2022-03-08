@@ -30,6 +30,7 @@ body {
 .form-control input,
 .form-control label {
   display: block;
+  margin-bottom: 1rem;
 }
 
 .form-control label {
@@ -97,12 +98,12 @@ button:disabled:active {
   margin-left: 1rem;
 }
 
-.invalid input {
+.form-control .invalid {
   border: 1px solid #b40e0e;
   background-color: #fddddd;
 }
 
-.invalid input:focus {
+.form-control .invalid:focus {
   border-color: #ff8800;
   background-color: #fbe8d2;
 }
