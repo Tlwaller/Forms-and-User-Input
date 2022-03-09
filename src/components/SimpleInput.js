@@ -17,11 +17,9 @@ const SimpleInput = (props) => {
     valueChangeHandler: emailChangeHandler,
     inputBlurHandler: emailBlurHandler,
     reset: resetEmail,
-  } = useInput((value) => value.trim() !== "");
+  } = useInput((value) => value.trim().includes("@"));
 
-  let formIsValid = false;
-
-  if (nameIsValid && emailIsValid) formIsValid = true;
+  const formIsValid = nameIsValid && emailIsValid;
 
   const submitHandler = (e) => {
     e.preventDefault();
@@ -59,7 +57,7 @@ const SimpleInput = (props) => {
           value={email}
         />
         {emailHasError && email.trim() === "" && (
-          <p className="error-text">Email must not be empty.</p>
+          <p className="error-text">Must be a valid email.</p>
         )}
       </div>
       <div className="form-actions">
